@@ -14,6 +14,17 @@ app.get('/', (req, res) => {
     res.sendFile(join(__dirname, '/templates/index.html'));
 });
 
+app.get('/nocart', (req, res) => {
+    res.sendFile(join(__dirname, '/templates/nocart.html'));
+});
+
+app.get('/cart', (req, res) => {
+    res.sendFile(join(__dirname, '/templates/cart.html'));
+});
+
+app.get ('/article', (req, res) => {
+    res.sendFile(join(__dirname, '/templates/article.html'));
+});
 
 // DÃ©marrage du serveur
 const PORT = process.env.PORT || 8080;
