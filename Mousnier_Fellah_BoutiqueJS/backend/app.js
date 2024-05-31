@@ -10,6 +10,17 @@ app.use('/public/', express.static(join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use(express.json());
 
+app.get('/nocart', (req, res) => {
+    res.sendFile(join(__dirname, '/templates/nocart.html'));
+});
+
+app.get('/cart', (req, res) => {
+    res.sendFile(join(__dirname, '/templates/cart.html'));
+});
+
+app.get ('/article', (req, res) => {
+    res.sendFile(join(__dirname, '/templates/article.html'));
+});
 
 // Démarrage du serveur
 const PORT = process.env.PORT || 8080;
