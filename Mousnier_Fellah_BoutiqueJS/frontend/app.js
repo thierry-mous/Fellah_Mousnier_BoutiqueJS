@@ -26,6 +26,10 @@ app.get ('/article', (req, res) => {
     res.sendFile(join(__dirname, '/templates/article.html'));
 });
 
+app.get ('/category', (req, res) => {
+    res.sendFile(join(__dirname, '/templates/category.html'));
+});
+
 // DÃ©marrage du serveur
 const PORT = process.env.PORT || 8080;
 
